@@ -24,6 +24,17 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
     alert(`add money success from ${bankAccount} 
         at ${new Date()}`);
     setBalance(newBalance);
+    
+    // history container add
+    const history = document.getElementById("history-container");
+    // new div creat 
+    const newHistory = document.createElement("div");
+    newHistory.innerHTML =`
+    <div class="transaction-card p-5 bg-base-100">
+    Add Money ${ammount} Taka Success From ${bankAccount},acc-no ${accno} at ${new Date()}
+    </div>
+    `;
+    history.append(newHistory);
   } else {
     alert("Invalid Pin Faa!");
     return;

@@ -27,10 +27,12 @@ function showOnly(id)
 {
     const addmoney = document.getElementById("Add-Money") 
     const cashout = document.getElementById("Cashout") 
+    const history = document.getElementById("history") 
 
     // hiddent part
     addmoney.classList.add("hidden");
     cashout.classList.add ("hidden");
+    history.classList.add ("hidden");
 
     // show id 
      const selected=document.getElementById(id);
