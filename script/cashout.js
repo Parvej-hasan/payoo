@@ -5,7 +5,7 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
     return;
   }
   const cashoutAmount = getValueFromInput("Cashout-amount");
-  const currentBalance=getBalance();
+  const currentBalance = getBalance();
   const newBalance = currentBalance - Number(cashoutAmount);
   console.log(newBalance);
   if (newBalance < 0) {
@@ -15,19 +15,18 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
   const pin = getValueFromInput("Cashout-pin");
   if (pin === "1234") {
     alert("Cashout Succesfully");
-    
-  // history container add
+    document.getElementById("balance").innerText = newBalance;
+
+    // history container add
     const history = document.getElementById("history-container");
-    // new div creat 
+    // new div creat
     const newHistory = document.createElement("div");
-    newHistory.innerHTML =`
+    newHistory.innerHTML = `
     <div class="transaction-card p-5 bg-base-100">
     Cashout ${cashoutAmount}Taka Success From ${cashoutNumber}, at ${new Date()}
     </div>
     `;
     history.append(newHistory);
-    
- 
   } else {
     alert("Invalid Pin Faa!!");
     return;
