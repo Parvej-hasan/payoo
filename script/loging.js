@@ -15,7 +15,7 @@ document.getElementById("loging-btn").addEventListener("click",function(){
     {
         alert("Login succesfully");
         // window.location.replace("/home.html")
-        window.location.assign("/home.html")
+        window.location.assign("./home.html")
     }
     else{
         alert("logging nehi hoga re baba")
